@@ -2,13 +2,13 @@
   "name": "expressjs-postgres",
   "private": true,
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "index.js",
   "author": "Jake Runzer",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.37",
