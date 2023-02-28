@@ -20,8 +20,9 @@ GlobalFonts.registerFromPath("./assets/fonts/ClashGrotesk-Variable.ttf", "Clash 
 GlobalFonts.registerFromPath("./assets/fonts/GeneralSans-Variable.ttf", "General Sans Variable");
 GlobalFonts.registerFromPath("./assets/fonts/Satoshi-Variable.ttf", "Satoshi Variable");
 
-const getBase64StringFromDataURL = (dataURL) =>
-    dataURL.replace('data:', '').replace(/^.+,/, '');
+
+app.get("/page",(req,res) => res.send("<h1>Hello world</h1>"));
+app.get("/health",(_,res) = res.send("done"));
 app.post("/image", (req, res) => {
  
   let canvas;
