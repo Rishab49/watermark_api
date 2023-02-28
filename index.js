@@ -4,6 +4,8 @@ import { drawText, drawImage } from "./methods/helper.js";
 import { createCanvas,GlobalFonts } from '@napi-rs/canvas';
 import { Image } from '@napi-rs/canvas';
 
+
+
 const app = express();
 app.use(cors(
   {
@@ -52,8 +54,7 @@ app.post("/image", (req, res) => {
   img.src = new Buffer.from(body.img.replace(/^data:image\/(png|gif|jpeg);base64,/,''),"base64");
 });
 
-app.listen("3000", () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("listening");
 });
 
-export default app;
